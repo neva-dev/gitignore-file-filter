@@ -14,9 +14,10 @@ Useful for Java applications or libraries which wants to use GitIgnore like file
 
 Supports nested *.gitignore* files.
 
-## Usage
+## Setup
 
-Sample Kotlin code:
+1) Enter [BinTray](https://bintray.com/neva-dev/maven-public/gitignore-file-filter) and setup repository and compile dependency in project build.
+2) Consider sample Kotlin code:
 
 ```kotlin
 val rootDir = File("/some/root")

@@ -1,0 +1,48 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
+group 'com.neva.commons'
+version '1.0.0'
+description = 'Gitignore File Filter'
+defaultTasks = ['publishToMavenLocal']
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+bintray {
+    user = project.properties.get('bintrayUser') ?: System.getenv('BINTRAY_USER')
+    key = project.properties.get('bintrayKey') ?: System.getenv('BINTRAY_KEY')
+    publications = ['mavenJava']
+    pkg {
+        repo = 'maven-public'
+        name = 'gitignore-file-filter'
+        userOrg = 'neva-dev'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/neva-dev/gitignore.git'
+        labels = ['gitignore', 'git', 'vcs']
+        version {
+            name = project.version
+            desc = "${project.description} ${project.version}"
+            vcsTag = project.version
+        }
+    }
+    publish = true
+}

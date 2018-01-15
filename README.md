@@ -8,14 +8,19 @@
 
 ## Description
 
-It is a reusable wrapper for file exclusion mechanism extracted from [NetBeans Git Module](https://github.com/myabc/nbgit/tree/master/src/org/nbgit/util/exclude).
+It is a reusable Java wrapper for [GitIgnore](https://git-scm.com/docs/gitignore) file exclusion mechanism extracted from [NetBeans Git Module](https://github.com/myabc/nbgit/tree/master/src/org/nbgit/util/exclude).
 
+Useful for Java applications or libraries which wants to use GitIgnore like file filtering. 
+
+Supports nested *.gitignore* files.
 
 ## Usage
 
+Sample Kotlin code:
+
 ```kotlin
 val rootDir = File("/some/root")
-val sampleFile = File("SomeClass.class", rootDir)
+val sampleFile = File("class/SomeClass.class", rootDir)
 val gitIgnore = GitIgnore(rootDir)
 
 if (gitIgnore.isExcluded(sampleFile)) {

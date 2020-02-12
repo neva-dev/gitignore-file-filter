@@ -1,10 +1,10 @@
 ![Neva Development logo](docs/neva-logo.png)
 
-[![Gradle Status](https://gradleupdate.appspot.com/Cognifide/gradle-aem-plugin/status.svg)](https://gradleupdate.appspot.com/Cognifide/gradle-aem-plugin/status)
-[![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/Cognifide/gradle-aem-plugin.svg?label=License)](http://www.apache.org/licenses/)
+[![Download](https://api.bintray.com/packages/neva-dev/maven-public/gitignore-file-filter/images/download.svg) ](https://bintray.com/neva-dev/maven-public/gitignore-file-filter/_latestVersion)
+[![Gradle Status](https://gradleupdate.appspot.com/Cneva-dev/gitignore-file-filter/status.svg?random=123)](https://gradleupdate.appspot.com/neva-dev/gitignore-file-filter/status)
+[![Apache License, Version 2.0, January 2004](docs/apache-license-badge.svg)](http://www.apache.org/licenses/)
 
 # GitIgnore File Filter
-
 
 ## Description
 

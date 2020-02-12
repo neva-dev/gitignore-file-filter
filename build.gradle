@@ -5,7 +5,6 @@ plugins {
 }
 
 group 'com.neva.commons'
-version '1.0.0'
 description = 'Gitignore File Filter'
 defaultTasks = ['publishToMavenLocal']
 
